@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.http.response import HttpResponse
 from django.urls import path, include
-from . import anm
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('first_app/', include("first_app.urls")),
-    path('', anm.home_view)
+    path('', views.home_view)
 ]
